@@ -3,7 +3,9 @@ new Vue({
     el:'#vue-app',          // Asocio la instancia al div que lo va a contener todo
     data: {                 // Declaracion de los datos que tendrá mi instancia y se bindearán al HTML.
         name: 'Jesus',
-        job: 'Developer'
+        job: 'Developer',
+        website: 'http://www.google.es',
+        websiteTag: '<a href="http://www.google.es">Google</a>'
     },
     methods: {              // Declaración de los métodos de mi instancia
         greet: function(time){

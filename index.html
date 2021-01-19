@@ -8,9 +8,12 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>{{ greet('afternoon') }}</h1>
-        <p>Name: {{ name }}</p>
-        <p>Job: {{ job }}</p>
+        <h1>Data Binding</h1>
+        <!-- 2 formas de bindear un enlace: por v-bind con la url, o por v-html con la etiqueta html que lo contendría -->
+        <a v-bind:href="website">Google</a>
+        <p v-html="websiteTag"></p>
+        <!-- Ejemplo de input con bindeo -->
+        <input type="text" v-bind:value="name">
     </div>
     <script src="app.js"></script>
 </body>
