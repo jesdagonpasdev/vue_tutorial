@@ -2,15 +2,20 @@
 new Vue({ 
     el:'#vue-app',          // Asocio la instancia al div que lo va a contener todo
     data: {                 // Declaracion de los datos que tendrá mi instancia y se bindearán al HTML.
-        name: 'Jesus',
-        job: 'Developer',
-        website: 'http://www.google.es',
-        websiteTag: '<a href="http://www.google.es">Google</a>'
+        age: 25,
+        x: 0,
+        y: 0
     },
     methods: {              // Declaración de los métodos de mi instancia
-        greet: function(time){
-            // Para insertar un valor de una variable de "data", valdría simplemente con poner this.name para extraerlo.
-            return 'Good ' + time + ' ' + this.name;
+        add: function(inc){
+            this.age += inc;
+        },
+        substract: function(dec) {
+            this.age -= dec;
+        },
+        updateXY: function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
         }
     }
 }); 

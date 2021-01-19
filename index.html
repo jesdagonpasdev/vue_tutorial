@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
     <div id="vue-app">
-        <h1>Data Binding</h1>
-        <!-- 2 formas de bindear un enlace: por v-bind con la url, o por v-html con la etiqueta html que lo contendría -->
-        <a v-bind:href="website">Google</a>
-        <p v-html="websiteTag"></p>
-        <!-- Ejemplo de input con bindeo -->
-        <input type="text" v-bind:value="name">
+        <h1>Events</h1>
+
+        <!-- Ejemplo de v-on:click para sumar o restar 1 a la variable al hacer click -->
+        <!--<button v-on:click="age++">Add a Year</button>
+        <button v-on:click="age--">Substract a Year</button>-->
+
+        <!-- Ejemplo de v-on:click a través de un método para sumar o restar 1 a la variable al hacer click -->
+        <!--<button v-on:click="add">Add a Year</button>
+        <button v-on:click="substract">Substract a Year</button>-->
+
+        <!-- Ejemplo de v-on:click a través de un método pasando por variable el valor de sumar o restar -->
+        <button v-on:click="add(1)">Add a Year</button>
+        <button v-on:click="substract(1)">Substract a Year</button>
+        <button v-on:dblclick="add(10)">Add 10 Years</button>
+        <button v-on:dblclick="substract(10)">Substract 10 Years</button>
+        <p>My age is {{ age }}</p>
+
+        <!-- Ejemplo de bindeo de un evento mousemove -->
+        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
     </div>
     <script src="app.js"></script>
 </body>
